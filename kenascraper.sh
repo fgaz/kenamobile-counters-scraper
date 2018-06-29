@@ -33,7 +33,7 @@ make_ajax(){
 }
 
 execute_operation(){
-  echo "$(make_ajax $1 $2 ${OPERATIONS[$3]})"
+  echo "$(make_ajax $1 $2 ${OPERATIONS["${3}"]})"
 }
 
 usage(){
