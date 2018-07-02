@@ -66,3 +66,9 @@ results in
 ]
 ```
 
+You can use `jq` to get only the information you need. For example:
+
+* Only counters: `jq '.[0].auxBag'`
+* Remaining megabytes: `jq '.[0].auxBag."2"|(.base_value / 1000000)'`
+* Remaining fraction of mobile data: `jq '.[0].auxBag."2"|(.base_value / .bagInitValue)'`
+
